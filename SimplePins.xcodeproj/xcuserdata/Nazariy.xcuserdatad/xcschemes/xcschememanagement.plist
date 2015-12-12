@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>spnx.xcscheme</key>
+		<key>SimplePins.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CDAE99E11C1B7C7700C22D27</key>
+		<key>6EB1B8F31C1C65E900377EC4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

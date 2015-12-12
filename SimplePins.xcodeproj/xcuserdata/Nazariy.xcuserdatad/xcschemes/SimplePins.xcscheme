@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0710"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CDAE99E11C1B7C7700C22D27"
-               BuildableName = "spnx.app"
-               BlueprintName = "spnx"
-               ReferencedContainer = "container:spnx.xcodeproj">
+               BlueprintIdentifier = "6EB1B8F31C1C65E900377EC4"
+               BuildableName = "SimplePins.app"
+               BlueprintName = "SimplePins"
+               ReferencedContainer = "container:SimplePins.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CDAE99E11C1B7C7700C22D27"
-            BuildableName = "spnx.app"
-            BlueprintName = "spnx"
-            ReferencedContainer = "container:spnx.xcodeproj">
+            BlueprintIdentifier = "6EB1B8F31C1C65E900377EC4"
+            BuildableName = "SimplePins.app"
+            BlueprintName = "SimplePins"
+            ReferencedContainer = "container:SimplePins.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CDAE99E11C1B7C7700C22D27"
-            BuildableName = "spnx.app"
-            BlueprintName = "spnx"
-            ReferencedContainer = "container:spnx.xcodeproj">
+            BlueprintIdentifier = "6EB1B8F31C1C65E900377EC4"
+            BuildableName = "SimplePins.app"
+            BlueprintName = "SimplePins"
+            ReferencedContainer = "container:SimplePins.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CDAE99E11C1B7C7700C22D27"
-            BuildableName = "spnx.app"
-            BlueprintName = "spnx"
-            ReferencedContainer = "container:spnx.xcodeproj">
+            BlueprintIdentifier = "6EB1B8F31C1C65E900377EC4"
+            BuildableName = "SimplePins.app"
+            BlueprintName = "SimplePins"
+            ReferencedContainer = "container:SimplePins.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
