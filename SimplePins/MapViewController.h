@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User+CoreDataProperties.h"
 
 @interface MapViewController : UIViewController
 
-@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) User *user;
 
 @end

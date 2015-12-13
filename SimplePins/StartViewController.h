@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SimplePinsViewController.h"
 
-@interface ViewController : UIViewController
+@interface StartViewController : SimplePinsViewController
 
 @end
 

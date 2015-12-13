@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface User : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
++ (User *)createNewUser:(NSString *)name password:(NSString *)password;
++ (User *)getUserByName:(NSString *)name password:(NSString *)password;
++ (User *)userById:(NSString *)idString;
++ (void)deleteLastObjectId;
 
 @end
 
