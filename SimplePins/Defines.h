@@ -11,6 +11,7 @@
 
 #define FB_ACCESS_TOKEN @"FacebookAccessToken"
 #define LAST_OBJECT_ID @"LastObjectID"
+#define REMOVE_ANNOTATION @"RemoveAnnotation"
 #define PASSWORD_LENGTH 4
 
 #endif /* Defines_h */

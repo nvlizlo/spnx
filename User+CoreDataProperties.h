@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.h
 //  SimplePins
 //
-//  Created by Nazariy Vlizlo on 12/13/15.
+//  Created by Nazariy Vlizlo on 12/14/15.
 //  Copyright © 2015 Nazariy Vlizlo. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

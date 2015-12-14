@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "User+CoreDataProperties.h"
+#import <MapKit/MapKit.h>
 
 @interface MapViewController : UIViewController
 
 @property (nonatomic, strong) User *user;
+
+- (void)mapViewRemoveAnnotation:(id<MKAnnotation>)annotation;
 
 @end

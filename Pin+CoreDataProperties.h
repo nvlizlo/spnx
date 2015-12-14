@@ -2,7 +2,7 @@
 //  Pin+CoreDataProperties.h
 //  SimplePins
 //
-//  Created by Nazariy Vlizlo on 12/13/15.
+//  Created by Nazariy Vlizlo on 12/14/15.
 //  Copyright © 2015 Nazariy Vlizlo. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSNumber *attitude;
 @property (nullable, nonatomic, retain) NSNumber *longtitude;
+@property (nullable, nonatomic, retain) NSString *name;
+@property (nullable, nonatomic, retain) NSString *info;
 @property (nullable, nonatomic, retain) User *user;
 
 @end

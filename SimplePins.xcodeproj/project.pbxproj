@@ -25,6 +25,8 @@
 		6EB1B9411C1C8AD600377EC4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB1B93D1C1C8AD600377EC4 /* User.m */; };
 		CD3F6ED31C1DF0D800FC009F /* SimplePinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3F6ED21C1DF0D800FC009F /* SimplePinsViewController.m */; };
 		CD6543C81C1E2FF00090D88D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6543C71C1E2FF00090D88D /* MapKit.framework */; };
+		CD6543CF1C1EBE6D0090D88D /* SimplePinAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6543CE1C1EBE6D0090D88D /* SimplePinAnnotation.m */; };
+		CD6543D21C1ED08C0090D88D /* SimplePinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6543D11C1ED08C0090D88D /* SimplePinAnnotationView.m */; };
 		CDAE99FB1C1DEEF200C22D27 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAE99FA1C1DEEF200C22D27 /* RegisterViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,10 @@
 		CD3F6ED11C1DF0D800FC009F /* SimplePinsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePinsViewController.h; sourceTree = "<group>"; };
 		CD3F6ED21C1DF0D800FC009F /* SimplePinsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePinsViewController.m; sourceTree = "<group>"; };
 		CD6543C71C1E2FF00090D88D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CD6543CD1C1EBE6D0090D88D /* SimplePinAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePinAnnotation.h; sourceTree = "<group>"; };
+		CD6543CE1C1EBE6D0090D88D /* SimplePinAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePinAnnotation.m; sourceTree = "<group>"; };
+		CD6543D01C1ED08C0090D88D /* SimplePinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePinAnnotationView.h; sourceTree = "<group>"; };
+		CD6543D11C1ED08C0090D88D /* SimplePinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePinAnnotationView.m; sourceTree = "<group>"; };
 		CDAE99F71C1CCB9C00C22D27 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		CDAE99F91C1DEEF200C22D27 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		CDAE99FA1C1DEEF200C22D27 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
@@ -98,6 +104,7 @@
 		6EB1B8F61C1C65EA00377EC4 /* SimplePins */ = {
 			isa = PBXGroup;
 			children = (
+				CD6543C91C1EBE140090D88D /* Views */,
 				6EB1B9351C1C8A4F00377EC4 /* Core data */,
 				6EB1B8FA1C1C65EB00377EC4 /* AppDelegate.h */,
 				6EB1B8FB1C1C65EB00377EC4 /* AppDelegate.m */,
@@ -136,17 +143,44 @@
 			isa = PBXGroup;
 			children = (
 				6EB1B9151C1C7AD100377EC4 /* Model.xcdatamodeld */,
+				CD42F7051C1EF665002CEF41 /* Pin */,
+				CD42F7061C1EF67B002CEF41 /* User */,
+			);
+			name = "Core data";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CD42F7051C1EF665002CEF41 /* Pin */ = {
+			isa = PBXGroup;
+			children = (
 				6EB1B9361C1C8AD600377EC4 /* Pin+CoreDataProperties.h */,
 				6EB1B9371C1C8AD600377EC4 /* Pin+CoreDataProperties.m */,
 				6EB1B9381C1C8AD600377EC4 /* Pin.h */,
 				6EB1B9391C1C8AD600377EC4 /* Pin.m */,
+			);
+			name = Pin;
+			sourceTree = "<group>";
+		};
+		CD42F7061C1EF67B002CEF41 /* User */ = {
+			isa = PBXGroup;
+			children = (
 				6EB1B93A1C1C8AD600377EC4 /* User+CoreDataProperties.h */,
 				6EB1B93B1C1C8AD600377EC4 /* User+CoreDataProperties.m */,
 				6EB1B93C1C1C8AD600377EC4 /* User.h */,
 				6EB1B93D1C1C8AD600377EC4 /* User.m */,
 			);
-			name = "Core data";
-			path = ..;
+			name = User;
+			sourceTree = "<group>";
+		};
+		CD6543C91C1EBE140090D88D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD6543CD1C1EBE6D0090D88D /* SimplePinAnnotation.h */,
+				CD6543CE1C1EBE6D0090D88D /* SimplePinAnnotation.m */,
+				CD6543D01C1ED08C0090D88D /* SimplePinAnnotationView.h */,
+				CD6543D11C1ED08C0090D88D /* SimplePinAnnotationView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		CDAE99F81C1DEEBB00C22D27 /* ViewControllers */ = {
@@ -237,12 +271,14 @@
 			files = (
 				6EB1B93F1C1C8AD600377EC4 /* Pin.m in Sources */,
 				6EB1B8FF1C1C65EB00377EC4 /* StartViewController.m in Sources */,
+				CD6543D21C1ED08C0090D88D /* SimplePinAnnotationView.m in Sources */,
 				6EB1B9411C1C8AD600377EC4 /* User.m in Sources */,
 				CD3F6ED31C1DF0D800FC009F /* SimplePinsViewController.m in Sources */,
 				6EB1B8FC1C1C65EB00377EC4 /* AppDelegate.m in Sources */,
 				6EB1B91A1C1C7B9C00377EC4 /* MapViewController.m in Sources */,
 				CDAE99FB1C1DEEF200C22D27 /* RegisterViewController.m in Sources */,
 				6EB1B8F91C1C65EB00377EC4 /* main.m in Sources */,
+				CD6543CF1C1EBE6D0090D88D /* SimplePinAnnotation.m in Sources */,
 				6EB1B9171C1C7AD100377EC4 /* Model.xcdatamodeld in Sources */,
 				6EB1B9401C1C8AD600377EC4 /* User+CoreDataProperties.m in Sources */,
 				6EB1B93E1C1C8AD600377EC4 /* Pin+CoreDataProperties.m in Sources */,
@@ -357,7 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "/Users/nazariyvlizlo/Documents/FacebookSDKs-iOS-20151111";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				INFOPLIST_FILE = SimplePins/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -373,7 +409,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "/Users/nazariyvlizlo/Documents/FacebookSDKs-iOS-20151111";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				INFOPLIST_FILE = SimplePins/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
