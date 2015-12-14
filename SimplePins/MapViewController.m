@@ -32,13 +32,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSArray *pinAnnotations = _user.pins.allObjects;
-    for (Pin *pin in pinAnnotations) {
-        SimplePinAnnotation *simplePinAnnotation = [[SimplePinAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(pin.attitude.doubleValue, pin.longtitude.doubleValue)
-                                                                                              name:pin.name
-                                                                                       description:pin.info];
-        [_mapView addAnnotation:simplePinAnnotation];
-    }
+    [self loadAnnotations];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -60,24 +54,7 @@
 }
 
 - (IBAction)logoutButtonPressed:(id)sender {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *managedObjectContext = appDelegate.managedObjectContext;
-    NSError *error = nil;
-    
-    NSArray *annotations = _mapView.annotations;
-    for (id<MKAnnotation> annotation in annotations) {
-        if (annotation == _mapView.userLocation) {
-            continue;
-        }
-        Pin *pin = [Pin getPinByName:[annotation title] description:[annotation subtitle]  user:_user];
-        if (![_user.pins containsObject:pin]) {
-            pin = [Pin createPinName:[annotation title] description:[annotation subtitle] coordinate:[annotation coordinate]];
-            [_user addPinsObject:pin];
-        } else {
-            [pin updateValues:annotation];
-        }
-    }
-    if ([managedObjectContext save:&error]) {
+    if ([self saveAnnotations]) {
         [self.navigationController popToRootViewControllerAnimated:YES];
         [[FBSDKLoginManager new] logOut];
     }
@@ -104,6 +81,8 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+#pragma mark MKMapViewDelegate
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     NSString *identifier = @"SimplePin";
     if ([annotation isKindOfClass:[SimplePinAnnotation class]]) {
@@ -122,6 +101,37 @@
 
 - (void)mapViewRemoveAnnotation:(NSNotification *)notification {
     [_mapView removeAnnotation:[notification.userInfo objectForKey:@"annotation"]];
+}
+
+- (void)loadAnnotations {
+    NSArray *pinAnnotations = _user.pins.allObjects;
+    for (Pin *pin in pinAnnotations) {
+        SimplePinAnnotation *simplePinAnnotation = [[SimplePinAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(pin.attitude.doubleValue, pin.longtitude.doubleValue)
+                                                                                              name:pin.name
+                                                                                       description:pin.info];
+        [_mapView addAnnotation:simplePinAnnotation];
+    }
+}
+
+- (BOOL)saveAnnotations {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *managedObjectContext = appDelegate.managedObjectContext;
+    NSError *error = nil;
+    
+    NSArray *annotations = _mapView.annotations;
+    for (id<MKAnnotation> annotation in annotations) {
+        if (annotation == _mapView.userLocation) {
+            continue;
+        }
+        Pin *pin = [Pin getPinByName:[annotation title] description:[annotation subtitle]  user:_user];
+        if (![_user.pins containsObject:pin]) {
+            pin = [Pin createPinName:[annotation title] description:[annotation subtitle] coordinate:[annotation coordinate]];
+            [_user addPinsObject:pin];
+        } else {
+            [pin updateValues:annotation];
+        }
+    }
+    return [managedObjectContext save:&error];
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
